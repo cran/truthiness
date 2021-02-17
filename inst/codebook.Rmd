@@ -1,0 +1,93 @@
+---
+title: "The Truth Trajectory: Codebook and Stimulus Materials"
+author: "Emma L. Henderson, Daniel J. Simons, and Dale J. Barr"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: 
+  html_document:
+    df_print: kable
+params:
+  show_stim: TRUE
+---
+
+# Codebook
+
+Below is information about the structure of the anonymized data included in the `{truthiness}` package. The data is divided into four separate tables:
+
+* **`sessions`** : Information about the experimental sessions.
+* **`phases`** : Information about the individual phases of data collection.
+* **`ratings`** : Truth ratings.
+* **`cjudgments`** : Categorization judgments from the exposure phase.
+
+These objects are also documented in the R package help files (e.g., `?sessions`).
+
+For non-R users, CSV versions of these data files are also available at the [project repository](https://osf.io/nvugt/).
+
+## Session information (`sessions`)
+
+```{r sess, echo = FALSE}
+library("tibble")
+library("truthiness")
+
+tribble(~Variable, ~Description,
+        "`ID`", "Unique participant identifier",
+        "`list_id`", "Which presentation list the participant received (1-8).",
+        "`Age`", "Participant age (years)",
+        "`Gender`", "Participant gender (Female, Male, Gender variant, or Prefer not to say)",
+        "`Nationality`", "Participant nationality",
+        "`NativeLang`", "Participant native language",
+        "`keep`", "Whether to retain participant's data in the analysis.",
+        "`excl_phase`", "Phase in which exclusion occurred (or NA).",
+        "`excl_reason`", "Reason for exclusion (or NA).",
+        "`chk_noduplicates`", "Whether there were no duplicated sessions.",
+        "`chk_consent_all`", "Whether participant gave consent for all phases.",
+        "`chk_native`", "Whether participant self-identified as a native English speaker",
+        "`chk_nocheat`", "Whether participant did not report looking up answer during any phase",
+        "`chk_dur_all`", "Whether participant completed all phases within reasonable limits",
+        "`chk_noflatline`", "Whether participant did not produce any 'flatline' responses for a single phase (e.g., all ratings of the same response category)",
+        "`chk_anydata`","Whether there is any ratings data for this participant.",
+        "`chk_notmanex`", "Whether the participant was manually excluded.")
+```
+
+## Phase information (`phases`)
+
+```{r phase, echo = FALSE}
+tribble(~Variable, ~Description,
+        "`ID`", "Unique participant identifier",
+        "`phase_id`", "Which phase (1 = immediate, 2 = 1 day, 3 = 1 week, 4 = 1 month)",
+        "`duration_secs`", "Total duration of the phase for specific participant/phase combination",
+        "`keep`", "Whether to retain this phase data for this participant in the analysis.",
+        "`p_excl_reason`", "Reason phase is excluded (or NA).",
+        "`chk_consent`", "Whether participant gave consent for this phase.",
+        "`chk_finished`", "Whether all responses were filled in",
+        "`chk_dur_phase`", "Whether the phase was completed within reasonable time limits.",
+        "`chk_notmanex`", "Whether the phase for this participant was manually excluded.")
+```
+
+## Truth ratings (`ratings`)
+
+```{r truth, echo = FALSE}
+tribble(~Variable, ~Description,
+        "`ID`", "Unique participant identifier",
+        "`phase_id`", "Which phase (1 = immediate, 2 = 1 day, 3 = 1 week, 4 = 1 month)",
+        "`stim_id`", "Unique stimulus identifier",
+        "`trating`", "Truth rating (1-7), 1 = Definitely false, 7 = Definitely true"
+        )
+```
+
+## Categorization judgments (`cjudgments`)
+
+```{r interest, echo = FALSE}
+tribble(~Variable, ~Description,
+        "`ID`", "Unique participant identifier",
+        "`stim_id`", "Unique stimulus identifier",
+        "`category`", "Category the participant assigned this statement to."
+        )
+```
+
+# Stimulus Materials
+
+`r if (!params$show_stim) {"Stimuli have been withheld from the repository until the completion of data collection. This has been done to avoid the possibility that potential participants will find them online. You can access them using the truthiness::codebook() function in R."}`
+
+```{r stim, echo = FALSE, eval = params$show_stim}
+DT::datatable(stimulus_materials)
+```
