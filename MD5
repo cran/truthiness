@@ -1,18 +1,19 @@
-413008ba45c079143934af5ee5b886c0 *DESCRIPTION
+0411936ecb9fd3d73eeac47508ba4911 *DESCRIPTION
 a50fd2112eb02794dff1b76c7060722f *NAMESPACE
+dfad21e06b7e9903064261f7d5ffaa28 *NEWS.md
 9f43a52f583d6364aaac2330f8ae2534 *R/data.R
 6a8c212b85fb9dd34974cb6122b44ee1 *R/emmeans.R
 12e65ab34bc1254d0ff231952bde8a9a *R/fit.R
 e1da1defa0d362ebf8ee501fda473023 *R/misc.R
 8dd41457bfd79c59536bd57d5b518608 *R/power.R
-a471fccbdbba5c713f2e149f9eba6295 *R/preprocess.R
+1e03d7b0a7e772f12f6ce6d5eb924ff9 *R/preprocess.R
 6c2b6b4e053188a1f775471c3318807f *R/reproduce.R
 b17e1c13216fb405efd48143212dd08a *R/response_files.R
 3e070e11c8a0064d4830257396d5e1d2 *R/simulate.R
 e23d8b2e79b7b5a5377182006fcbfe25 *R/sysdata.rda
 d9d778f5b4c7bc2bad61493a476fe41c *R/truthiness.R
 65cef5e0674056f6fc07dd2b3ca85c13 *R/utils-pipe.R
-85b4e23fba6a92b0c6a38d3bf6482a9c *build/partial.rdb
+d21302a133540fa52f3ae7829fd4bbf5 *build/partial.rdb
 3629c4e6a15afa68938f26fdb53a6c7b *data/NE_exp1.rda
 bba8e04b2fc2b76306fa05e06f094689 *data/NE_items.rda
 c3aacc86351c265c2ba2f7a9253f4985 *data/cjudgments.rda
@@ -48,6 +49,7 @@ a5c55cce53d061c96d4d92e98ffd169e *man/NE_exp1.Rd
 54d9addf2622ad1efe4d5330564c34a7 *man/derive_fixed.Rd
 7ef9e4d8a515ed038f342b1a199ffa09 *man/equivtest.Rd
 d562710350d637173afb1c1b92f2e913 *man/eta2resp.Rd
+386567edd3b8deb4083788a937585f8e *man/figures/README-example-1.png
 8f5789af5e060a83d201f4e4f80cfe70 *man/fit_clmm.Rd
 c4ba71c74009723deaf71a2c96b6e778 *man/fit_lmem.Rd
 9298cb31ab858b93120fbe004f04aad9 *man/flag_fake.Rd
@@ -72,3 +74,4 @@ d8ebcd0c1779f95d6311a043555d0067 *man/validate_filenames.Rd
 acf7817c00a0c8fd2ede37d2178a75b5 *man/warn.Rd
 3fa02c61de9d679c3fedeba91c7175c1 *tests/testthat.R
 75dfc376d95ff0b0f0adcf4a700241a9 *tests/testthat/test-derive-fixed.R
+a28fb1274bcda91263dcefced6d151fa *tests/testthat/test-readr.R

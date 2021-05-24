@@ -1,7 +1,7 @@
 Package: truthiness
 Title: Illusory Truth Longitudinal Study
-Version: 1.2.4
-Date: 2021-02-17
+Version: 1.2.5
+Date: 2021-05-23
 Authors@R: c(
     person(given = "Dale", family = "Barr", role = c("aut", "cre"),
            email = "dalejbarr@protonmail.com"),
@@ -33,9 +33,9 @@ RdMacros: Rdpack
 RoxygenNote: 7.1.1
 Suggests: testthat (>= 2.1.0)
 NeedsCompilation: no
-Packaged: 2021-02-17 11:50:23 UTC; dalebarr
+Packaged: 2021-05-24 07:37:57 UTC; dalebarr
 Author: Dale Barr [aut, cre],
   Emma Henderson [ctb]
 Maintainer: Dale Barr <dalejbarr@protonmail.com>
 Repository: CRAN
-Date/Publication: 2021-02-17 20:40:02 UTC
+Date/Publication: 2021-05-24 08:00:03 UTC
